@@ -26,7 +26,7 @@ export default function Home() {
             </div>
             <div>
               <Image
-                src="/images/david-img.png"
+                src="/images/david-img-1.png"
                 alt="David"
                 width={350}
                 height={350}
@@ -71,8 +71,8 @@ export default function Home() {
           <Link href="#">View all ~~&gt;</Link>
         </div>
 
-        <div className="grid grid-cols-1  lg:grid-cols-3 gap-4">
-          {[1, 2, 3].map((index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[1, 2, 3, 4].map((index) => (
             <BigProject key={index} />
           ))}
         </div>
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-3 lg:grid-cols-5 gap-4">
-          <div className="sm:hidden lg:col-span-2">
+          <div className="sm:hidden lg:block lg:col-span-2">
             <Image
               src="/images/icons.png"
               alt="Icons"
@@ -157,6 +157,40 @@ export default function Home() {
                 <span>Express</span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container my-20">
+        <div className="relative py-8">
+          <h1 className="text-2xl after:content-['']  after:absolute after:top-1/2 after:translate-x-2 after:inline-block after:w-1/3 after:h-0.5 after:bg-primary">
+            <span className="text-primary">#</span> About-me
+          </h1>
+        </div>
+
+        <div className="flex justify-between gap-20">
+          <div className="md:max-w-96 space-y-8 text-xs">
+            <p className="text-gray">Hello, i’m David!</p>
+            <p className="text-gray">
+              I’m a self-taught front-end developer based in Kyiv, Ukraine. I
+              can develop responsive websites from scratch and raise them into
+              modern user-friendly web experiences.{" "}
+            </p>
+            <p className="text-gray">
+              Transforming my creativity and knowledge into a websites has been
+              my passion for over a year. I have been helping various clients to
+              establish their presence online. I always strive to learn about
+              the newest technologies and frameworks.
+            </p>
+            <Button>Read more →</Button>
+          </div>
+          <div className="hidden md:block">
+            <Image
+              src="/images/david-img-2.png"
+              width={200}
+              height={400}
+              alt="David"
+            />
           </div>
         </div>
       </div>
