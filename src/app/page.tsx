@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import Button from "./components/Button";
+import Link from "next/link";
+import BigProject from "./components/BigProject";
 
 export default function Home() {
   return (
@@ -58,6 +60,19 @@ export default function Home() {
               <span>- Dr. Who</span>
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="container my-20">
+        <div className="relative flex justify-between py-8">
+          <h1 className="text-2xl after:content-['']  after:absolute after:top-1/2 after:translate-x-2 after:inline-block after:w-1/2 after:h-0.5 after:bg-primary">
+            <span className="text-primary">#</span> projects
+          </h1>
+          <Link href="#">View all ~~&gt;</Link>
+        </div>
+
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-4">
+          {[1, 2, 3].map(index => <BigProject key={index} />)}
         </div>
       </div>
     </main>

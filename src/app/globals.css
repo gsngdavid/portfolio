@@ -18,5 +18,11 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #282C33
+  background: #282c33;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto;
+  }
 }
