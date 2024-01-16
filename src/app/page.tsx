@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Button from "./components/Button";
 import Link from "next/link";
 import BigProject from "./components/BigProject";
+import DiscordIcon from "../assests/Icons/DiscordIcon";
+import EmailIcon from "../assests/Icons/EmainIcon";
 
 export default function Home() {
   return (
@@ -191,6 +193,29 @@ export default function Home() {
               height={400}
               alt="David"
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="container my-20">
+        <div className="relative py-8">
+          <h1 className="text-2xl after:content-['']  after:absolute after:top-1/2 after:translate-x-2 after:inline-block after:w-1/3 after:h-0.5 after:bg-primary">
+            <span className="text-primary">#</span> Contacts
+          </h1>
+        </div>
+
+        <div className="flex justify-between gap-20">
+          <div className="md:max-w-96 space-y-8 text-xs">
+            <p className="text-gray">
+              I’m interested in freelance opportunities. However, if you have
+              other request or question, don’t hesitate to contact me
+            </p>
+            <Button>Read more →</Button>
+          </div>
+          <div className="flex flex-col gap-y-4 border border-gray text-gray text-sm p-4">
+            <p className="text-white text-base">Message me here</p>
+            <Link href="#" className="flex items-center gap-1"><DiscordIcon className="w-4 h-4" />!gsngdavid</Link>
+            <Link href="#" className="flex items-center gap-1"><EmailIcon className="w-4 h-4" />gsngdavid@gmail.com</Link>
           </div>
         </div>
       </div>
