@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./Button";
+import Button from "./ui/Button";
 import { ButtonVariant } from "../types/enums";
 
 function BigProject() {
