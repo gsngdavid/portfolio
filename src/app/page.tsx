@@ -8,7 +8,7 @@ import EmailIcon from "../assests/Icons/EmainIcon";
 
 export default function Home() {
   return (
-    <main className="p-10">
+    <main className="">
       <div className="container">
         <Header />
 
