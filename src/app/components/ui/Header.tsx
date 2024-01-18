@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <div className="flex justify-between items-center">
+    <div className=" container flex justify-between items-center py-8">
       <Link href="#" className="flex gap-2 items-center">
         <Image src="/images/logo.png" alt="Logo" width={20} height={20} />
         <span>David</span>
