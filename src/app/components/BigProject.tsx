@@ -1,36 +1,34 @@
 import Image from "next/image";
 import Button from "./ui/Button";
 import { ButtonVariant } from "../types/enums";
+import { ProjectDto } from "../utils/api";
 
-function BigProject() {
+function BigProject({ project }: { project: ProjectDto }) {
   return (
-    <div className="border border-gray">
-      <Image
-        src="/images/project.png"
-        alt="Project X"
-        width={100}
-        height={100}
-        className="w-full object-fit"
-      />
+    <div className="flex flex-col justify-between border border-gray">
       <div className="">
-        <div className="flex flex-wrap gap-x-3 text-gray text-sm border border-gray py-1 px-2">
-          <span>React</span>
-          <span>Express</span>
-          <span>Discord.js</span>
-          <span>Node.js</span>
-          <span>HTML</span>
-          <span>SCSS</span>
-          <span>Python</span>
-          <span>Flask</span>
-        </div>
-        <div className="flex flex-col justify-between py-3 px-2 space-y-2">
-          <h1 className="text-lg">Project X</h1>
-          <p className="text-gray">Discord ant-crash bot</p>
-          <div className="flex gap-4">
-            <Button>Live &lt;~&gt;</Button>
-            <Button variant={ButtonVariant.SECONDARY}>Cached &ge;</Button>
+        <Image
+          src={project.imageUrl}
+          alt={project.name}
+          width={100}
+          height={100}
+          className="w-full object-fit"
+        />
+        <div className="text-sm">
+          <div className="flex flex-wrap gap-x-3 text-gray text-sm border-y border-gray py-1 px-2">
+            {project.languages.map((language, index) => (
+              <span key={index}>{language}</span>
+            ))}
+          </div>
+          <div className="flex flex-col justify-between py-3 px-2 space-y-2">
+            <h1 className="text-lg">{project.name}</h1>
+            <p className="text-gray">{project.description}</p>
           </div>
         </div>
+      </div>
+      <div className="flex gap-4 py-3 px-2 text-sm">
+        <Button>Live &lt;~&gt;</Button>
+        <Button variant={ButtonVariant.SECONDARY}>Cached &ge;</Button>
       </div>
     </div>
   );

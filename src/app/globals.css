@@ -23,6 +23,40 @@ body {
 
 @layer components {
   .container {
-    @apply mx-auto px-10;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+  @media (min-width: 390px) {
+    .container {
+      max-width: 390px;
+    }
+  }
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+    }
   }
 }

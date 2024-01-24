@@ -1,16 +1,40 @@
+"use client";
+
 import Image from "next/image";
-import Button from "./components/ui/Button";
+import Button from "../components/ui/Button";
 import Link from "next/link";
-import BigProject from "./components/BigProject";
-import DiscordIcon from "../assests/Icons/DiscordIcon";
-import EmailIcon from "../assests/Icons/EmainIcon";
+import BigProject from "../components/BigProject";
+import DiscordIcon from "../../assests/Icons/DiscordIcon";
+import EmailIcon from "../../assests/Icons/EmainIcon";
+import { useQuery } from "@tanstack/react-query";
+import { ProjectDto } from "../utils/api";
+import GitHubIcon from "../../assests/Icons/GithubIcon";
+import MediumIcon from "../../assests/Icons/MediumIcon";
 
 export default function Home() {
+  const fetchProjects = async () => {
+    const response = await fetch("http://localhost:3001/projects");
+    return await response.json();
+  };
+
+  const {
+    data: projects,
+    isLoading: projectsLoading,
+    error: projectsError,
+  } = useQuery<ProjectDto[]>({
+    queryFn: () => fetchProjects(),
+    queryKey: ["projects"],
+  });
+
+  if (projectsError) return <h1>Something went wrong, try it again later.</h1>;
+
+  if (projects === null || projectsLoading) return <h1>Loading...</h1>;
+
   return (
     <main>
       <div className="container">
         <div className="grid grid-cols-1 justify-items-center sm:grid-cols-2 sm:justify-between gap-14 sm:items-center pt-6 pb-16">
-          <div className="sm:max-w-96 space-y-5 text-center sm:text-left">
+          <div className="sm:max-w-96 space-y-5 text-center sm:text-left sm:justify-self-start">
             <h1 className="text-xl font-semibold">
               David is a <span className="text-primary">web designer</span> and{" "}
               <span className="text-primary">front-end developer</span>
@@ -22,7 +46,7 @@ export default function Home() {
               <span className="text-sm">Contact me !!</span>
             </Button>
           </div>
-          <div className="">
+          <div className=" sm:justify-self-end">
             <Image
               src="/images/david-img-1.png"
               alt="David"
@@ -31,7 +55,10 @@ export default function Home() {
             />
             <div className="flex items-center gap-1 border border-gray text-gray text-sm p-1">
               <div className="w-3 h-3 bg-primary inline-block"></div>
-              <p className="whitespace-nowrap overflow-hidden overflow-ellipsis">Currently working on <span className="text-white">Portfolio</span></p>
+              <p className="whitespace-nowrap overflow-hidden overflow-ellipsis">
+                Currently working on{" "}
+                <span className="text-white">Portfolio</span>
+              </p>
             </div>
           </div>
         </div>
@@ -64,16 +91,18 @@ export default function Home() {
           <h1 className="text-2xl after:content-['']  after:absolute after:top-1/2 after:translate-x-2 after:inline-block after:w-1/2 after:h-0.5 after:bg-primary">
             <span className="text-primary">#</span> projects
           </h1>
-          <Link className="hidden sm:inline" href="#">View all ~~&gt;</Link>
+          <Link className="hidden sm:inline" href="#">
+            View all ~~&gt;
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((index) => (
-            <BigProject key={index} />
+          {projects?.map((project) => (
+            <BigProject key={project.id} project={project} />
           ))}
         </div>
         <div className="text-center py-8 sm:hidden">
-        <Button>View all ~~&gt;</Button>
+          <Button>View all ~~&gt;</Button>
         </div>
       </div>
 

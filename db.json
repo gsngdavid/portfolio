@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "ChertNodes",
+      "imageUrl": "/images/projects/p1.jpg",
+      "languages": ["HTML", "SCSS", "Python", "Flask"],
+      "description": "Minecraft servers hosting",
+      "liveLink": "#",
+      "cachedLink": "#"
+    },
+    {
+      "name": "Project X",
+      "imageUrl": "/images/projects/p2.png",
+      "languages": [
+        "React",
+        "Express",
+        "Discord.js",
+        "HTML",
+        "SCSS",
+        "Python",
+        "Flask"
+      ],
+      "description": "Discord anti-crash bot",
+      "liveLink": "#",
+      "cachedLink": "#"
+    },
+    {
+      "name": "Kahoot Answers Viewer",
+      "imageUrl": "/images/projects/p3.png",
+      "languages": ["CSS", "Express", "Node.js"],
+      "description": "Get answers to your kahoot quiz",
+      "liveLink": "#",
+      "cachedLink": "#"
+    },
+    {
+      "name": "ChertNodes",
+      "imageUrl": "/images/projects/p1.jpg",
+      "languages": ["HTML", "SCSS", "Python", "Flask"],
+      "description": "Minecraft servers hosting",
+      "liveLink": "#",
+      "cachedLink": "#"
+    }
+  ]
+}
