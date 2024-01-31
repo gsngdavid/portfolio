@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "./ui/Button";
-import { ButtonVariant } from "../types/enums";
 import { ProjectDto } from "../utils/api";
+import { ButtonVariant } from "../types/enums";
 
 function BigProject({ project }: { project: ProjectDto }) {
   return (

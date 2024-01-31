@@ -1,22 +1,15 @@
-"use client";
+import { Metadata } from "next";
+import "../../globals.css";
 
-import "../globals.css";
-import Footer from "../components/ui/Footer";
-import Header from "../components/ui/Header";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
+export const metadata: Metadata = {
+  title: "David Gusenga",
+  description: "David's portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Header />
-      {children}
-      <Footer />
-    </QueryClientProvider>
-  );
+  return <div>{children}</div>;
 }

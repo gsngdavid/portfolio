@@ -1,34 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../components/ui/Button";
 import Link from "next/link";
-import BigProject from "../components/BigProject";
 import DiscordIcon from "../../assests/Icons/DiscordIcon";
 import EmailIcon from "../../assests/Icons/EmainIcon";
 import { useQuery } from "@tanstack/react-query";
-import { ProjectDto } from "../utils/api";
-import GitHubIcon from "../../assests/Icons/GithubIcon";
-import MediumIcon from "../../assests/Icons/MediumIcon";
+import { ProjectDto } from "../../utils/api";
+import Button from "../../components/ui/Button";
+import BigProject from "../../components/BigProject";
+import fetchHelper from "../../helpers/fetch-helper";
 
 export default function Home() {
-  const fetchProjects = async () => {
-    const response = await fetch("http://localhost:3001/projects");
-    return await response.json();
-  };
-
   const {
     data: projects,
     isLoading: projectsLoading,
     error: projectsError,
   } = useQuery<ProjectDto[]>({
-    queryFn: () => fetchProjects(),
+    queryFn: () => fetchHelper("http://localhost:3001/projects"),
     queryKey: ["projects"],
   });
-
-  if (projectsError) return <h1>Something went wrong, try it again later.</h1>;
-
-  if (projects === null || projectsLoading) return <h1>Loading...</h1>;
 
   return (
     <main>
@@ -97,6 +87,8 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {projectsError && <h1>Something went wrong, try it again later.</h1>}
+          {projects === null || (projectsLoading && <h1>Loading...</h1>)}
           {projects?.map((project) => (
             <BigProject key={project.id} project={project} />
           ))}
