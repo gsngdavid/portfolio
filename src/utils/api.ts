@@ -1,13 +1,19 @@
 // ================== Projects ==================
 
-export interface ProjectProperties {
-  id: number;
+export interface BigProjectDto {
+  id: string;
   name: string;
-  imageUrl: string;
-  languages: string[];
-  description: string;
   liveLink: string;
+  imageUrl: string;
   cachedLink: string;
+  description: string;
+  technologies: string[];
 }
 
-export interface ProjectDto extends ProjectProperties {}
+export interface SmallProjectDto {
+  id: string,
+  name: string;
+  githubLink: string;
+  description: string;
+  technologies: string[];
+}

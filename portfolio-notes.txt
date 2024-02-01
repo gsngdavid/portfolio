@@ -1,0 +1,4 @@
+RESOURCES:
+
+1. SVG: https://www.svgrepo.com/
+2. FETCH: https://tanstack.com/query/latest/

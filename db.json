@@ -1,9 +1,9 @@
 {
-  "projects": [
+  "big-projects": [
     {
       "name": "ChertNodes",
       "imageUrl": "/images/projects/p1.jpg",
-      "languages": ["HTML", "SCSS", "Python", "Flask"],
+      "technologies": ["HTML", "SCSS", "Python", "Flask"],
       "description": "Minecraft servers hosting",
       "liveLink": "#",
       "cachedLink": "#"
@@ -11,7 +11,7 @@
     {
       "name": "Project X",
       "imageUrl": "/images/projects/p2.png",
-      "languages": [
+      "technologies": [
         "React",
         "Express",
         "Discord.js",
@@ -27,7 +27,7 @@
     {
       "name": "Kahoot Answers Viewer",
       "imageUrl": "/images/projects/p3.png",
-      "languages": ["CSS", "Express", "Node.js"],
+      "technologies": ["CSS", "Express", "Node.js"],
       "description": "Get answers to your kahoot quiz",
       "liveLink": "#",
       "cachedLink": "#"
@@ -35,10 +35,60 @@
     {
       "name": "ChertNodes",
       "imageUrl": "/images/projects/p1.jpg",
-      "languages": ["HTML", "SCSS", "Python", "Flask"],
+      "technologies": ["HTML", "SCSS", "Python", "Flask"],
       "description": "Minecraft servers hosting",
       "liveLink": "#",
       "cachedLink": "#"
+    }
+  ],
+  "small-projects": [
+    {
+      "technologies": ["Discord.js", "TS", "JS"],
+      "name": "Bot boilerplate",
+      "description": "Start creating scalable discord.js bot with typescript in seconds",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["VUE", "CSS", "JS"],
+      "name": "My blog",
+      "description": "Front-end of my future blog website written in vue",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["Figma"],
+      "name": "Chess Pro",
+      "description": "Figma landing page about service for viewing chess tournaments",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["Figma"],
+      "name": "Crash protect website",
+      "description": "Figma template for website about anti-raid, anti-crash discord bot",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["HTML", "CSS"],
+      "name": "CSS expirements",
+      "description": "Collection of my different little projects in css",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["Lua", "NeoVim"],
+      "name": "Web Dev nvim config",
+      "description": "Config for neovim perfect for web developer",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["Python", "Quart", "HTML"],
+      "name": "Ooku",
+      "description": "Simple link shortener with auth",
+      "githubLink": "#"
+    },
+    {
+      "technologies": ["Figma"],
+      "name": "School website",
+      "description": "Figma template website for my school",
+      "githubLink": "#"
     }
   ]
 }

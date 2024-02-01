@@ -5,7 +5,7 @@ import Link from "next/link";
 import DiscordIcon from "../../assests/Icons/DiscordIcon";
 import EmailIcon from "../../assests/Icons/EmainIcon";
 import { useQuery } from "@tanstack/react-query";
-import { ProjectDto } from "../../utils/api";
+import { BigProjectDto } from "../../utils/api";
 import Button from "../../components/ui/Button";
 import BigProject from "../../components/BigProject";
 import fetchHelper from "../../helpers/fetch-helper";
@@ -15,8 +15,8 @@ export default function Home() {
     data: projects,
     isLoading: projectsLoading,
     error: projectsError,
-  } = useQuery<ProjectDto[]>({
-    queryFn: () => fetchHelper("http://localhost:3001/projects"),
+  } = useQuery<BigProjectDto[]>({
+    queryFn: () => fetchHelper("http://localhost:3001/big-projects"),
     queryKey: ["projects"],
   });
 

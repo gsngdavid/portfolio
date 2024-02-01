@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Button from "./ui/Button";
-import { ProjectDto } from "../utils/api";
+import { BigProjectDto } from "../utils/api";
 import { ButtonVariant } from "../types/enums";
 
-function BigProject({ project }: { project: ProjectDto }) {
+function BigProject({ project }: { project: BigProjectDto }) {
   return (
     <div className="flex flex-col justify-between border border-gray">
       <div className="">
@@ -16,8 +16,8 @@ function BigProject({ project }: { project: ProjectDto }) {
         />
         <div className="text-sm">
           <div className="flex flex-wrap gap-x-3 text-gray text-sm border-y border-gray py-1 px-2">
-            {project.languages.map((language, index) => (
-              <span key={index}>{language}</span>
+            {project.technologies.map((technology, index) => (
+              <span key={index}>{technology}</span>
             ))}
           </div>
           <div className="flex flex-col justify-between py-3 px-2 space-y-2">
