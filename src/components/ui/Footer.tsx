@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import GitHubIcon from "../../assests/Icons/GithubIcon";
-import MediumIcon from "../../assests/Icons/MediumIcon";
-import DiscordIcon from "../../assests/Icons/DiscordIcon";
+import GitHubIcon from "../../assets/Icons/GithubIcon";
+import MediumIcon from "../../assets/Icons/MediumIcon";
+import DiscordIcon from "../../assets/Icons/DiscordIcon";
 
 function Footer() {
   return (

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import "../../globals.css";
-import LinesLeaningIcon from "../../assests/Icons/LinesLeaning";
+import LinesLeaningIcon from "../../assets/Icons/LinesLeaning";
 
 export const metadata: Metadata = {
   title: "David Gusenga | Projects",

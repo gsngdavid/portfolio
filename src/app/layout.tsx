@@ -1,11 +1,13 @@
 "use client"
 
+
+import "../globals.css";
 import { Fira_Code } from "next/font/google";
 import Link from "next/link";
 import { ReactNode } from "react";
-import GitHubIcon from "../assests/Icons/GithubIcon";
-import MediumIcon from "../assests/Icons/MediumIcon";
-import DiscordIcon from "../assests/Icons/DiscordIcon";
+import GitHubIcon from "../assets/Icons/GithubIcon";
+import MediumIcon from "../assets/Icons/MediumIcon";
+import DiscordIcon from "../assets/Icons/DiscordIcon";
 import Header from "../components/ui/Header";
 import Footer from "../components/ui/Footer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import NavLink from "./NavLink";
 
 function Header() {
   return (
@@ -9,10 +11,11 @@ function Header() {
         <span>David</span>
       </Link>
       <div className="flex gap-4">
-        <Link href="#"><span className="text-primary">#</span>home</Link>
-        <Link href="#" className="text-gray"><span className="text-primary">#</span>works</Link>
-        <Link href="#" className="text-gray"><span className="text-primary">#</span>about-me</Link>
-        <Link href="#" className="text-gray"><span className="text-primary">#</span>contacts</Link>
+        <NavLink exact href="/"><span className="text-primary">#</span>home</NavLink>
+        {/* <Link  className={router.pathname === '/' ? '': 'text-gray'} href="/"><span className="text-primary">#</span>home</Link> */}
+        <NavLink exact href="/works"><span className="text-primary">#</span>works</NavLink>
+        <NavLink exact href="/about-me"><span className="text-primary">#</span>about-me</NavLink>
+        <NavLink exact href="/contacts"><span className="text-primary">#</span>contacts</NavLink>
         <select name="lang" id="">
             <option value="english">EN</option>
             <option value="french">FR</option>

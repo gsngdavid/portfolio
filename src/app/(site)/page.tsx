@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import DiscordIcon from "../../assests/Icons/DiscordIcon";
-import EmailIcon from "../../assests/Icons/EmainIcon";
+import DiscordIcon from "../../assets/Icons/DiscordIcon";
+import EmailIcon from "../../assets/Icons/EmainIcon";
 import { useQuery } from "@tanstack/react-query";
 import { BigProjectDto } from "../../utils/api";
 import Button from "../../components/ui/Button";

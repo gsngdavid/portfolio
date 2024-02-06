@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import BigProject from "../../components/BigProject";
 import fetchHelper from "../../helpers/fetch-helper";
-import HarshTagIcon from "../../assests/Icons/HarshTagIcon";
+import HarshTagIcon from "../../assets/Icons/HarshTagIcon";
 import SmallProject from "../../components/smallProject";
 import { BigProjectDto, SmallProjectDto } from "../../utils/api";
 
