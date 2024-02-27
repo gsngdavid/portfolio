@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import LinesLeaningIcon from "../../assets/Icons/LinesLeaning";
+import TitleHolder from "../../components/TitleHolder";
 
 export const metadata: Metadata = {
   title: "David Gusenga | Projects",
@@ -12,15 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <>
       <div className="container">
-        <div className="flex gap-1 items-center">
-          <LinesLeaningIcon fill="peru" className="w-6 h-6" />
-          <h1 className="text-2xl">Projects</h1>
-        </div>
-        <p className="text-sm">List of my projects</p>
+        <TitleHolder title="Projects" subtitle="List of my projects" />
       </div>
       {children}
-    </div>
+    </>
   );
 }

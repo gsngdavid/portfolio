@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import TitleHolder from "../../components/TitleHolder";
 
 export const metadata: Metadata = {
-  title: "David Gusenga | About me",
+  title: "David Gusenga | Contacts",
   description: "David's portfolio",
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <>
       <div className="container">
-      <TitleHolder title="About-me" subtitle="Who am I?" />
+        <TitleHolder title="Contacts" subtitle="Who am I?" />
       </div>
       {children}
     </>
