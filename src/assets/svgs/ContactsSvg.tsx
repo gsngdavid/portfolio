@@ -8,8 +8,8 @@ export default function ContactsSvg({ className }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       width="987.58708"
-      height="714.02784"
-      viewBox="0 0 987.58708 714.02784"
+      height="525"
+      viewBox="0 0 987.58708 525"
       className={className}
     //   xmlns:xlink="http://www.w3.org/1999/xlink"
     >
