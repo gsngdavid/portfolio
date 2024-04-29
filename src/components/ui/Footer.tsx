@@ -14,7 +14,7 @@ function Footer() {
             <span>David</span></div>
             <Link href="#" className="text-gray">gsngdavid@gmail.com</Link>
           </div>
-          <p>Web designer and front-end developer</p>
+          <p>Web designer and fullstack developer</p>
         </div>
         <div className="flex gap-4 xs:block xs:space-y-4">
           <h3 className="text-lg xs:text-center">Media<span className="xs:hidden">:</span></h3>

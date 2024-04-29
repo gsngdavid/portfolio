@@ -27,7 +27,7 @@ export default function Home() {
           <div className="sm:max-w-96 space-y-5 text-center sm:text-left sm:justify-self-start">
             <h1 className="text-xl font-semibold">
               David is a <span className="text-primary">web designer</span> and{" "}
-              <span className="text-primary">front-end developer</span>
+              <span className="text-primary">fullstack developer</span>
             </h1>
             <p className="text-gray text-sm">
               He crafts responsive websites where technologies meet creativity
@@ -192,7 +192,7 @@ export default function Home() {
           <div className="md:max-w-96 space-y-8 text-xs">
             <p className="text-gray">Hello, i’m David!</p>
             <p className="text-gray">
-              I’m a self-taught front-end developer based in Kyiv, Ukraine. I
+              I’m a  fullstack developer based in Kigali, Rwanda. I
               can develop responsive websites from scratch and raise them into
               modern user-friendly web experiences.{" "}
             </p>

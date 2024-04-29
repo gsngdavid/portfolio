@@ -10,7 +10,7 @@ export default function ProjectsPage() {
           <div className="md:max-w-[35rem] space-y-8 text-xs">
             <p className="text-gray">Hello, i’m David!</p>
             <p className="text-gray">
-              I’m a self-taught front-end developer based in Kyiv, Ukraine. I
+              I’m a  fullstack developer based in Kyiv, Ukraine. I
               can develop responsive websites from scratch and raise them into
               modern user-friendly web experiences.{" "}
             </p>
